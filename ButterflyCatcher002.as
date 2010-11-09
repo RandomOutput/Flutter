@@ -190,9 +190,9 @@
 				point1.x = e.tuioContainer.x*stage.stageWidth;
 				point1.y = e.tuioContainer.y*stage.stageHeight;
 				
-				if(point1.x <= Globals.StageWidth/2/* && !catcher1.ready*/) {
+				if(point1.x <= Globals.StageWidth/2) {
 					catcher1.addPoint(point1);
-				} else if(point1.x > Globals.StageWidth/2/* && !catcher2.ready*/) {
+				} else if(point1.x > Globals.StageWidth/2) {
 					catcher2.addPoint(point1);
 				}
 			}
@@ -424,10 +424,19 @@
 			/*
 			* check collision with net
 			*/
-			if(catcher1.ready && catcher2.ready) {			
-				for(var j:Number = 0; j < netCollisionPoints.length; j++) {
+			if(catcher1.ready) {			
+				for(var j:Number = 0; j < 7; j++) {
 					//switch the butterfly type if it hits the net
 					if(netCollisionPoints[j].hitTestObject(butterflies[i])){
+						butterflies[i].setButterflyType();
+					}
+				}
+			}
+			
+			if(catcher2.ready) {			
+				for(var k:Number = 7; k < netCollisionPoints.length; k++) {
+					//switch the butterfly type if it hits the net
+					if(netCollisionPoints[k].hitTestObject(butterflies[i])){
 						butterflies[i].setButterflyType();
 					}
 				}

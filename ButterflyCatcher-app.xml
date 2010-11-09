@@ -22,6 +22,10 @@
 
   
 
+
+
+  
+
 <!-- To localize the description, use the following format for the description element.
 	<description>
 		<text xml:lang="en">English App description goes here</text>
@@ -31,6 +35,10 @@
 	-->
 	<name>ButterflyCatcher</name>
 	
+
+
+
+  
 
 
 
@@ -70,6 +78,8 @@
 	<allowBrowserInvocation>false</allowBrowserInvocation>
 	<icon>
 	</icon>
+
+
 
 
 
